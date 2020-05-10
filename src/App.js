@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import logo from './assets/img/logo.svg';
 import './App.css';
+import Job from './Job.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Person extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {  myName: "hamid",
+                        lastName: "keyhani"}
+    }
+    render() {
+        return (
+            <div className="App">
+                <h1>Hello { this.state.myName + " " + this.state.lastName }</h1>
+                {/*access to props*/}
+                <h2>my age is { this.props.age }</h2>
+                <Job job="Full stack Android & Web Developer"/>
+            </div>
+        )
+    }
 }
 
-export default App;
+export default Person;
