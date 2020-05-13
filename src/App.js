@@ -6,8 +6,7 @@ import Job from './Job.js';
 class Person extends Component {
     constructor(props) {
         super(props);
-        this.state = {  myName: "hamid",
-                        lastName: "keyhani"}
+        this.state = {  myName: "حمید", lastName: "keyhani"}
     }
     render() {
         return (
