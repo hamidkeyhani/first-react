@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './assets/img/logo.svg';
 import './App.css';
 import Job from './Job.js';
+import Button from "@material-ui/core/Button";
+import Fade from "@material-ui/core/Fade";
 
 class Person extends Component {
     constructor(props) {
@@ -15,6 +16,12 @@ class Person extends Component {
                 {/*access to props*/}
                 <h2>my age is { this.props.age }</h2>
                 <Job job="Full stack Android & Web Developer"/>
+                <Fade in={true} timeout={2000}>
+                    <Button color="blue" variant="contained">
+                        button
+                    </Button>
+                </Fade>
+
             </div>
         )
     }
